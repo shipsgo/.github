@@ -1,0 +1,54 @@
+name: 🐞 Bug Report
+description: Report a bug or unexpected behavior
+title: "[X][project] short description"
+type: Bug
+
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: A brief description of the bug.
+      placeholder: The page crashes when I try to save.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Help us reproduce the problem step by step.
+      placeholder: |
+        1. Go to ...
+        2. Click ...
+        3. You will see the error in the console.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+      description: Tell us what the correct behavior should be.
+      placeholder: The form should submit successfully.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      description: Select one or more environments where the issue occurs.
+      multiple: true
+      options:
+        - Production
+        - Development
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Logs, screenshots, error messages, links, or any other context that might help.
+      placeholder: Logs, screenshots, error messages, links, or any other context.
+    validations:
+      required: false
